@@ -11,10 +11,10 @@ angular.module('cvApp', [])
         title: 'Młodszy specjalista ds. odnowy urządzeń mobilnych'
       },
       sections: [
-        { id: 'o-mnie', title: 'O mnie', content: 'Cześć, nazywam się Łukasz i od kilku miesięcy zajmuję się odnową urządzeń mobilnych, głównie telefonów firmy Apple. Interesuję się sportem, polityką i motoryzacją. Wolny czas lubię spędzać na graniu w gry komputerowe, oglądaniu seriali i czytaniu książęk typu thriller/kryminał. Jestem osobą dokładną i precyzyjną, dbam o detale i jakość wykonywanej przeze mnie pracy. Chętnie uczę się nowych rzeczy i lubię doskonalić swoje umiejętności.' },
-        { id: 'wyksztalcenie', title: 'Wykształcenie', tags: ['2022–obecnie: Szkoła Główna Gospodarstwa Wiejskiego, Informatyka']},
-        { id: 'doswiadczenie', title: 'Doświadczenie', tags: ['lipiec 2023–październik 2024: Tester wyświetlaczy - GSMOK', 'październik 2024–styczeń 2025: Młodszy specjalista ds. wsparcia IT - moreBIT (grupa Symfonia)', 'luty 2025–obecnie: Młodszy specjalista ds. odnowy urządzeń mobilnych - Bolttech Repairs Poland']},
-        { id: 'umiejetnosci', title: 'Umiejętności', items: [
+        { id: 'about-me', title: 'O mnie', content: 'Cześć, nazywam się Łukasz i od kilku miesięcy zajmuję się odnową urządzeń mobilnych, głównie telefonów firmy Apple. Interesuję się sportem, polityką i motoryzacją. Wolny czas lubię spędzać na graniu w gry komputerowe, oglądaniu seriali i czytaniu książęk typu thriller/kryminał. Jestem osobą dokładną i precyzyjną, dbam o detale i jakość wykonywanej przeze mnie pracy. Chętnie uczę się nowych rzeczy i lubię doskonalić swoje umiejętności.' },
+        { id: 'education', title: 'Wykształcenie', tags: ['2022–obecnie: Szkoła Główna Gospodarstwa Wiejskiego, Informatyka']},
+        { id: 'experience', title: 'Doświadczenie', tags: ['lipiec 2023–październik 2024: Tester wyświetlaczy - GSMOK', 'październik 2024–styczeń 2025: Młodszy specjalista ds. wsparcia IT - moreBIT (grupa Symfonia)', 'luty 2025–obecnie: Młodszy specjalista ds. odnowy urządzeń mobilnych - Bolttech Repairs Poland']},
+        { id: 'skills', title: 'Umiejętności', items: [
           { name: 'Programowanie', stars: 3 },
           { name: 'Zdolności manualne', stars: 5 },
           { name: 'Dokładność', stars: 5 },
@@ -22,14 +22,14 @@ angular.module('cvApp', [])
           { name: 'Język angielski', stars: 4 },
           { name: 'Język rosyjski', stars: 2 }
         ]},
-        { id: 'zainteresowania', title: 'Zainteresowania', items: [
+        { id: 'interests', title: 'Zainteresowania', items: [
           { name: 'Technologia', stars: 5 },
           { name: 'Polityka', stars: 5 },
           { name: 'Motoryzacja', stars: 4 },
           { name: 'Sport', stars: 4 },
           { name: 'Historia', stars: 4 }
         ]},
-        { id: 'linki', title: 'Linki', link: 'https://luxtrade.pl/', socials: [
+        { id: 'links', title: 'Linki', link: 'https://luxtrade.pl/', socials: [
           { icon: 'images/facebook.svg', href: 'https://www.facebook.com/profile.php?id=100008666132198&locale=pl_PL' },
           { icon: 'images/x.svg', href: 'https://x.com/wookashenko' }
         ]}
