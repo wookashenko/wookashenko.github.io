@@ -155,3 +155,11 @@ section h2::before {
 .cookie-banner button:hover {
   background-color: #16a085;
 }
+.about-text {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
+  font-size: 1.1em;
+}
