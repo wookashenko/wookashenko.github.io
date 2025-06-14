@@ -36,74 +36,68 @@ angular.module('cvApp', [])
       ],
       linkText: 'Naprawione i odnowione przeze mnie urządzenia możesz obejrzeć i zakupić',
       here: 'tutaj',
-      cookieMessage: 'Ta strona używa plików cookie w celach informacyjnych. Kontynuując przeglądanie, wyrażasz na to zgodę.',
-      accept: 'OK'
+      cookieMessage: 'Ta strona wykorzystuje pliki cookies, aby poprawić komfort użytkowania.',
+      accept: 'Akceptuję'
     },
     en: {
       profile: {
         name: 'Łukasz Bartnik',
-        title: 'Junior refurb specialist of mobile devices'
+        title: 'Junior Specialist in Mobile Device Refurbishment'
       },
       sections: [
-        { id: 'o-mnie', title: 'About Me', content: 'Hi, my name is Łukasz and for a few months now I have been dealing with the refurbishment of mobile devices, mainly Apple phones. I am interested in sports, politics and motoring. I like to spend my free time playing computer games, watching series and reading thriller/crime books. I am a precise and accurate person, I care about details and the quality of the work I do. I am eager to learn new things and I like to improve my skills.' },
-        { id: 'wyksztalcenie', title: 'Education', tags: ['2022–currently: Warsaw University of Life Sciences, Computer Science'] },
-        { id: 'doswiadczenie', title: 'Experience', tags: ['july 2023–october 2024: Display tester - GSMOK', 'october 2024–january 2025: Junior helpdesk IT specialist - moreBIT (group Symfonia)', 'february 2025–currently: Junior refurb specialist of mobile devices - Bolttech Repairs Poland']},
-        { id: 'umiejetnosci', title: 'Skills', items: [
+        { id: 'about-me', title: 'About Me', content: 'Hi, my name is Łukasz and for several months I have been refurbishing mobile devices, mainly Apple phones. I am interested in sports, politics, and automotive topics. In my free time I enjoy playing computer games, watching series, and reading thrillers/crime books. I am precise and careful, I pay attention to detail and the quality of my work. I like learning new things and improving my skills.' },
+        { id: 'education', title: 'Education', tags: ['2022–present: Warsaw University of Life Sciences, Computer Science']},
+        { id: 'experience', title: 'Experience', tags: ['July 2023–October 2024: Display Tester - GSMOK', 'October 2024–January 2025: Junior IT Support Specialist - moreBIT (Symfonia Group)', 'February 2025–present: Junior Specialist in Mobile Device Refurbishment - Bolttech Repairs Poland']},
+        { id: 'skills', title: 'Skills', items: [
           { name: 'Programming', stars: 3 },
-          { name: 'Manual Dexterity', stars: 5 },
-          { name: 'Precision', stars: 5 },
-          { name: 'Driving License: categories B and T', stars: 5 },
+          { name: 'Manual dexterity', stars: 5 },
+          { name: 'Accuracy', stars: 5 },
+          { name: 'Driver license: categories B and T', stars: 5 },
           { name: 'English language', stars: 4 },
           { name: 'Russian language', stars: 2 }
         ]},
-        { id: 'zainteresowania', title: 'Interests', items: [
+        { id: 'interests', title: 'Interests', items: [
           { name: 'Technology', stars: 5 },
           { name: 'Politics', stars: 5 },
           { name: 'Automotive', stars: 4 },
-          { name: 'Sport', stars: 4 },
+          { name: 'Sports', stars: 4 },
           { name: 'History', stars: 4 }
         ]},
-        { id: 'linki', title: 'Links', link: 'https://luxtrade.pl/', socials: [
-          { icon: 'images/facebook.svg', href: 'https://www.facebook.com/profile.php?id=100008666132198&locale=pl_PL' },
+        { id: 'links', title: 'Links', link: 'https://luxtrade.pl/', socials: [
+          { icon: 'images/facebook.svg', href: 'https://www.facebook.com/profile.php?id=100008666132198&locale=en_US' },
           { icon: 'images/x.svg', href: 'https://x.com/wookashenko' }
         ]}
       ],
-      linkText: 'You can view and purchase my refurbished devices',
+      linkText: 'You can view and buy devices repaired and refurbished by me',
       here: 'here',
-      cookieMessage: 'This website uses cookies for informational purposes. By continuing to browse, you consent to their use.',
-      accept: 'OK'
+      cookieMessage: 'This website uses cookies to improve your browsing experience.',
+      accept: 'Accept'
     }
   };
 
-  vm.cookieAccepted = false;
+  vm.sections = translations[vm.lang].sections;
+  vm.profile = translations[vm.lang].profile;
+  vm.lang = 'pl';
+  vm.currentSection = vm.sections[0];
+  vm.cookieAccepted = localStorage.getItem('cookieAccepted') === 'true';
 
-  vm.profile = {};
-  vm.sections = [];
-  vm.currentSection = null;
+  vm.selectSection = function(id) {
+    vm.currentSection = vm.sections.find(section => section.id === id);
+  };
 
   vm.setLang = function(lang) {
     vm.lang = lang;
-    vm.loadContent(vm.currentSection?.id);
+    vm.sections = translations[lang].sections;
+    vm.profile = translations[lang].profile;
+    vm.currentSection = vm.sections[0];
   };
 
   vm.translate = function(key) {
     return translations[vm.lang][key] || '';
   };
 
-  vm.loadContent = function(selectedId) {
-    const t = translations[vm.lang];
-    vm.profile = t.profile;
-    vm.sections = t.sections;
-    vm.currentSection = t.sections.find(s => s.id === selectedId) || t.sections[0];
-  };
-
-  vm.selectSection = function(id) {
-    vm.currentSection = vm.sections.find(s => s.id === id);
-  };
-
   vm.acceptCookies = function() {
     vm.cookieAccepted = true;
+    localStorage.setItem('cookieAccepted', 'true');
   };
-
-  vm.setLang('pl'); // default
 });
