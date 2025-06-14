@@ -11,7 +11,7 @@ angular.module('cvApp', [])
         title: 'Młodszy specjalista ds. odnowy urządzeń mobilnych'
       },
       sections: [
-        { id: 'o-mnie', title: 'O mnie', content: 'Cześć, nazywam się Łukasz i od kilku miesięcy zajmuję się odnową urządzeń mobilnych, głównie telefonów firmy Apple. Interesuję się sportem, polityką i motoryzacją. Wolny czas lubię spędzać na graniu w gry komputerowe, oglądaniu seriali i czytaniu książęk typu thriller/kryminał.' },
+        { id: 'o-mnie', title: 'O mnie', content: 'Cześć, nazywam się Łukasz i od kilku miesięcy zajmuję się odnową urządzeń mobilnych, głównie telefonów firmy Apple. Interesuję się sportem, polityką i motoryzacją. Wolny czas lubię spędzać na graniu w gry komputerowe, oglądaniu seriali i czytaniu książęk typu thriller/kryminał. Jestem osobą dokładną i precyzyjną, dbam o detale i jakość wykonywanej przeze mnie pracy. Chętnie uczę się nowych rzeczy i lubię doskonalić swoje umiejętności.' },
         { id: 'wyksztalcenie', title: 'Wykształcenie', tags: ['2022–obecnie: Szkoła Główna Gospodarstwa Wiejskiego, Informatyka']},
         { id: 'doswiadczenie', title: 'Doświadczenie', tags: ['lipiec 2023–październik 2024: Tester wyświetlaczy - GSMOK', 'październik 2024–styczeń 2025: Młodszy specjalista ds. wsparcia IT - moreBIT (grupa Symfonia)', 'luty 2025–obecnie: Młodszy specjalista ds. odnowy urządzeń mobilnych - Bolttech Repairs Poland']},
         { id: 'umiejetnosci', title: 'Umiejętności', items: [
@@ -37,7 +37,7 @@ angular.module('cvApp', [])
       linkText: 'Naprawione i odnowione przeze mnie urządzenia możesz obejrzeć i zakupić',
       here: 'tutaj',
       cookieMessage: 'Ta strona używa plików cookie w celach informacyjnych. Kontynuując przeglądanie, wyrażasz na to zgodę.',
-      accept: 'Akceptuję'
+      accept: 'OK'
     },
     en: {
       profile: {
@@ -45,7 +45,7 @@ angular.module('cvApp', [])
         title: 'Junior refurb specialist of mobile devices'
       },
       sections: [
-        { id: 'o-mnie', title: 'About Me', content: 'Hi, my name is Łukasz and for a few months now I have been dealing with the refurbishment of mobile devices, mainly Apple phones. I am interested in sports, politics and motoring. I like to spend my free time playing computer games, watching series and reading thriller/crime books.' },
+        { id: 'o-mnie', title: 'About Me', content: 'Hi, my name is Łukasz and for a few months now I have been dealing with the refurbishment of mobile devices, mainly Apple phones. I am interested in sports, politics and motoring. I like to spend my free time playing computer games, watching series and reading thriller/crime books. I am a precise and accurate person, I care about details and the quality of the work I do. I am eager to learn new things and I like to improve my skills.' },
         { id: 'wyksztalcenie', title: 'Education', tags: ['2022–currently: Warsaw University of Life Sciences, Computer Science'] },
         { id: 'doswiadczenie', title: 'Experience', tags: ['july 2023–october 2024: Display tester - GSMOK', 'october 2024–january 2025: Junior helpdesk IT specialist - moreBIT (group Symfonia)', 'february 2025–currently: Junior refurb specialist of mobile devices - Bolttech Repairs Poland']},
         { id: 'umiejetnosci', title: 'Skills', items: [
@@ -71,7 +71,7 @@ angular.module('cvApp', [])
       linkText: 'You can view and purchase my refurbished devices',
       here: 'here',
       cookieMessage: 'This website uses cookies for informational purposes. By continuing to browse, you consent to their use.',
-      accept: 'I accept'
+      accept: 'OK'
     }
   };
 
