@@ -86,10 +86,12 @@ angular.module('cvApp', [])
   };
 
   vm.setLang = function(lang) {
+    const currentSectionId = vm.currentSection ? vm.currentSection.id : null;
     vm.lang = lang;
     vm.sections = translations[lang].sections;
     vm.profile = translations[lang].profile;
-    vm.currentSection = vm.sections[0];
+
+    vm.currentSection = vm.sections.find(section => section.id === currentSectionId) || vm.sections[0];
   };
 
   vm.translate = function(key) {
