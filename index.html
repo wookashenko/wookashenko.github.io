@@ -14,15 +14,13 @@
   <nav>
     <ul>
       <li data-ng-repeat="section in vm.sections">
-        <a href="javascript:void(0)"
-           data-ng-click="vm.selectSection(section.id)"
-           data-ng-class="{active: vm.currentSection.id === section.id}">
+        <a href="#" data-ng-click="vm.selectSection(section.id)" data-ng-class="{active: vm.currentSection.id === section.id}">
           {{ section.title }}
         </a>
       </li>
       <li class="lang-switch">
-        <img data-ng-src="images/pl.png" alt="PL" data-ng-click="vm.setLang('pl')" data-ng-class="{active: vm.lang === 'pl'}" />
-        <img data-ng-src="images/en.png" alt="EN" data-ng-click="vm.setLang('en')" data-ng-class="{active: vm.lang === 'en'}" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==" data-ng-src="images/pl.png" alt="PL" data-ng-click="vm.setLang('pl')" data-ng-class="{active: vm.lang === 'pl'}" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==" data-ng-src="images/en.png" alt="EN" data-ng-click="vm.setLang('en')" data-ng-class="{active: vm.lang === 'en'}" />
       </li>
     </ul>
   </nav>
@@ -30,7 +28,7 @@
   <header class="intro">
     <h1>{{ vm.profile.name }}</h1>
     <h2>{{ vm.profile.title }}</h2>
-    <img data-ng-src="images/photo.jpeg" alt="Zdjęcie profilowe" />
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==" data-ng-src="images/photo.jpeg" alt="Zdjęcie profilowe" />
   </header>
 
   <main>
@@ -51,12 +49,12 @@
       </div>
 
       <div data-ng-if="vm.currentSection.link">
-        <p>{{ vm.translate('linkText') }} <a data-ng-href="{{ vm.currentSection.link }}" target="_blank" rel="noopener noreferrer">{{ vm.translate('here') }}</a>.</p>
+        <p>{{ vm.translate('linkText') }} <a href="#" data-ng-href="{{ vm.currentSection.link }}" target="_blank" rel="noopener noreferrer">{{ vm.translate('here') }}</a>.</p>
       </div>
 
       <div data-ng-if="vm.currentSection.socials" class="socials">
-        <a data-ng-repeat="social in vm.currentSection.socials" data-ng-href="{{ social.href }}" target="_blank" rel="noopener noreferrer">
-          <img data-ng-src="{{ social.icon }}" alt="Social icon" />
+        <a href="#" data-ng-repeat="social in vm.currentSection.socials" data-ng-href="{{ social.href }}" target="_blank" rel="noopener noreferrer">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==" data-ng-src="{{ social.icon }}" alt="Social icon" />
         </a>
       </div>
     </section>
