@@ -6,21 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-  <script src="app.js" defer></script>
 </head>
 <body ng-controller="MainController as vm">
 
   <nav>
     <ul>
       <li ng-repeat="section in vm.sections">
-        <a href="" ng-click="vm.selectSection(section.id)" ng-class="{active: vm.currentSection.id === section.id}">
+        <a href="javascript:void(0)" ng-click="vm.selectSection(section.id)" ng-class="{active: vm.currentSection.id === section.id}">
           {{ section.title }}
         </a>
       </li>
       <li class="lang-switch">
-        <img ng-src="images/pl.png" alt="PL" ng-click="vm.setLang('pl')" ng-class="{active: vm.lang === 'pl'}" />
-        <img ng-src="images/en.png" alt="EN" ng-click="vm.setLang('en')" ng-class="{active: vm.lang === 'en'}" />
+        <img ng-src="images/pl.png" alt="Polski" ng-click="vm.setLang('pl')" ng-class="{active: vm.lang === 'pl'}" />
+        <img ng-src="images/en.png" alt="English" ng-click="vm.setLang('en')" ng-class="{active: vm.lang === 'en'}" />
       </li>
     </ul>
   </nav>
@@ -28,7 +26,7 @@
   <header class="intro">
     <h1>{{ vm.profile.name }}</h1>
     <h2>{{ vm.profile.title }}</h2>
-    <img ng-src="images/photo.jpeg" alt="Zdjęcie profilowe" />
+    <img ng-src="images/photo.jpeg" alt="Zdjęcie profilowe Łukasza Bartnika" />
   </header>
 
   <main>
@@ -49,22 +47,23 @@
       </div>
 
       <div ng-if="vm.currentSection.link">
-        <p>{{ vm.translate('linkText') }} <a ng-href="{{ vm.currentSection.link }}" target="_blank">{{ vm.translate('here') }}</a>.</p>
+        <p>{{ vm.translate('linkText') }} <a ng-href="{{ vm.currentSection.link }}" target="_blank" rel="noopener noreferrer">{{ vm.translate('here') }}</a>.</p>
       </div>
 
       <div ng-if="vm.currentSection.socials" class="socials">
-        <a ng-repeat="social in vm.currentSection.socials" ng-href="{{ social.href }}" target="_blank">
-          <img ng-src="{{ social.icon }}" alt="Social icon" />
+        <a ng-repeat="social in vm.currentSection.socials" ng-href="{{ social.href }}" target="_blank" rel="noopener noreferrer">
+          <img ng-src="{{ social.icon }}" alt="Link do profilu społecznościowego" />
         </a>
       </div>
     </section>
   </main>
 
-  <!-- Cookie Banner -->
   <div id="cookie-banner" ng-show="!vm.cookieAccepted" class="cookie-banner">
     <p>{{ vm.translate('cookieMessage') }}</p>
-    <button ng-click="vm.acceptCookies()">{{ vm.translate('accept') }}</button>
+    <button type="button" ng-click="vm.acceptCookies()">{{ vm.translate('accept') }}</button>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
