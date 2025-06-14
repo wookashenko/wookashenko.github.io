@@ -35,7 +35,7 @@
     <section ng-if="vm.currentSection" class="fade-section">
       <h2><span>{{ vm.currentSection.title }}</span></h2>
 
-      <p ng-if="vm.currentSection.content">{{ vm.currentSection.content }}</p>
+      <p ng-if="vm.currentSection.content" class="about-text">{{ vm.currentSection.content }}</p>
 
       <div ng-if="vm.currentSection.tags">
         <div ng-repeat="tag in vm.currentSection.tags" class="badge">{{ tag }}</div>
