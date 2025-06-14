@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" ng-app="cvApp">
+<html lang="pl" data-ng-app="cvApp">
 <head>
   <meta charset="UTF-8" />
   <title>Łukasz Bartnik - CV</title>
@@ -9,20 +9,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   <script src="app.js" defer></script>
 </head>
-<body ng-controller="MainController as vm">
+<body data-ng-controller="MainController as vm">
 
   <nav>
     <ul>
-      <li ng-repeat="section in vm.sections">
-        <a href="#{{ section.id }}" 
-           ng-click="vm.selectSection(section.id)" 
-           ng-class="{active: vm.currentSection.id === section.id}">
+      <li data-ng-repeat="section in vm.sections">
+        <a href="#" data-ng-click="vm.selectSection(section.id)" data-ng-class="{active: vm.currentSection.id === section.id}">
           {{ section.title }}
         </a>
       </li>
       <li class="lang-switch">
-        <img ng-src="images/pl.png" alt="PL" ng-click="vm.setLang('pl')" ng-class="{active: vm.lang === 'pl'}" />
-        <img ng-src="images/en.png" alt="EN" ng-click="vm.setLang('en')" ng-class="{active: vm.lang === 'en'}" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==" data-ng-src="images/pl.png" alt="PL" data-ng-click="vm.setLang('pl')" data-ng-class="{active: vm.lang === 'pl'}" />
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==" data-ng-src="images/en.png" alt="EN" data-ng-click="vm.setLang('en')" data-ng-class="{active: vm.lang === 'en'}" />
       </li>
     </ul>
   </nav>
@@ -30,42 +28,42 @@
   <header class="intro">
     <h1>{{ vm.profile.name }}</h1>
     <h2>{{ vm.profile.title }}</h2>
-    <img ng-src="images/photo.jpeg" alt="Zdjęcie profilowe" />
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==" data-ng-src="images/photo.jpeg" alt="Zdjęcie profilowe" />
   </header>
 
   <main>
-    <section ng-if="vm.currentSection" class="fade-section" id="{{ vm.currentSection.id }}">
+    <section data-ng-if="vm.currentSection" class="fade-section">
       <h2><span>{{ vm.currentSection.title }}</span></h2>
 
-      <p ng-if="vm.currentSection.content" class="about-text">{{ vm.currentSection.content }}</p>
+      <p data-ng-if="vm.currentSection.content" class="about-text">{{ vm.currentSection.content }}</p>
 
-      <div ng-if="vm.currentSection.tags">
-        <div ng-repeat="tag in vm.currentSection.tags" class="badge">{{ tag }}</div>
+      <div data-ng-if="vm.currentSection.tags">
+        <div data-ng-repeat="tag in vm.currentSection.tags" class="badge">{{ tag }}</div>
       </div>
 
-      <div ng-if="vm.currentSection.items">
-        <div ng-repeat="item in vm.currentSection.items">
+      <div data-ng-if="vm.currentSection.items">
+        <div data-ng-repeat="item in vm.currentSection.items">
           <div class="badge">{{ item.name }}</div>
           <div class="stars">{{ '★'.repeat(item.stars) + '☆'.repeat(5 - item.stars) }}</div>
         </div>
       </div>
 
-      <div ng-if="vm.currentSection.link">
-        <p>{{ vm.translate('linkText') }} <a ng-href="{{ vm.currentSection.link }}" target="_blank" rel="noopener noreferrer">{{ vm.translate('here') }}</a>.</p>
+      <div data-ng-if="vm.currentSection.link">
+        <p>{{ vm.translate('linkText') }} <a href="#" data-ng-href="{{ vm.currentSection.link }}" target="_blank" rel="noopener noreferrer">{{ vm.translate('here') }}</a>.</p>
       </div>
 
-      <div ng-if="vm.currentSection.socials" class="socials">
-        <a ng-repeat="social in vm.currentSection.socials" ng-href="{{ social.href }}" target="_blank" rel="noopener noreferrer">
-          <img ng-src="{{ social.icon }}" alt="Social icon" />
+      <div data-ng-if="vm.currentSection.socials" class="socials">
+        <a href="#" data-ng-repeat="social in vm.currentSection.socials" data-ng-href="{{ social.href }}" target="_blank" rel="noopener noreferrer">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==" data-ng-src="{{ social.icon }}" alt="Social icon" />
         </a>
       </div>
     </section>
   </main>
 
   <!-- Cookie Banner -->
-  <div id="cookie-banner" ng-show="!vm.cookieAccepted" class="cookie-banner">
+  <div id="cookie-banner" data-ng-show="!vm.cookieAccepted" class="cookie-banner">
     <p>{{ vm.translate('cookieMessage') }}</p>
-    <button ng-click="vm.acceptCookies()">{{ vm.translate('accept') }}</button>
+    <button type="button" data-ng-click="vm.acceptCookies()">{{ vm.translate('accept') }}</button>
   </div>
 
 </body>
