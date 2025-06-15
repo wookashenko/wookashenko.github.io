@@ -36,8 +36,8 @@ angular.module('cvApp', [])
       ],
       linkText: 'Naprawione i odnowione przeze mnie urządzenia możesz obejrzeć i zakupić',
       here: 'tutaj',
-      cookieMessage: 'Ta strona wykorzystuje pliki cookies, aby poprawić komfort użytkowania.',
-      accept: 'Akceptuję'
+      cookieMessage: 'Ta strona używa plików cookie w celach informacyjnych. Kontynuując przeglądanie, wyrażasz na to zgodę.',
+      accept: 'Ok'
     },
     en: {
       profile: {
@@ -70,8 +70,8 @@ angular.module('cvApp', [])
       ],
       linkText: 'You can view and buy devices repaired and refurbished by me',
       here: 'here',
-      cookieMessage: 'This website uses cookies to improve your browsing experience.',
-      accept: 'Accept'
+      cookieMessage: 'This website uses cookies for informational purposes. By continuing to browse, you consent to their use.',
+      accept: 'Ok'
     }
   };
 
